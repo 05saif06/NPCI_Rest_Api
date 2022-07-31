@@ -1,0 +1,53 @@
+<h2 style=" margin-left: 40%;">Sales Team</h2>
+<div class="container">
+<table class = "table table-bordered table-striped" style="margin-top: 50px;">
+  <tr>
+    <th scope="col">FirstName</th>
+    <th scope="col">LastName</th>
+    <th scope="col">Email</th>
+    <th scope="col">Salary</th>
+    <th scope="col">Sales Volume</th>
+  </tr>
+
+  <tr *ngFor = "let temp of salesPersonList" [ngClass]="{'salarygreater': temp.salary >=20000, 'salaryless' : temp.salary < 20000}">
+    <td>{{temp.firstName}}</td>
+    <td>{{temp.lastName}}</td>
+    <td>{{temp.email}}</td>
+    <td>{{temp.salary}}</td>
+    <td>{{temp.salesVolume}}</td>
+  </tr>
+</table>
+<div class="container" style="text-align: center;">
+  <h2>Data Entry Of Sales</h2>&nbsp;
+<form  #salesperson = "ngForm" (ngSubmit) = "onSubmit()" style="margin-left: 25%;">
+  <div class="row">
+    <div class="col-sm-3"><label for="">FirstName</label></div>
+     <div class="col-sm-6"><input type="text" name="firstName" id="" [(ngModel)]="formModel.firstName"></div>
+   </div>
+   &nbsp;
+   <div class="row">
+    <div class="col-sm-3"><label for="">LastName</label></div>
+     <div class="col-sm-6"><input type="text" name="lastName" id="" [(ngModel)]="formModel.lastName"></div>
+   </div>
+   &nbsp;
+   <div class="row">
+    <div class="col-sm-3"><label for="">Email</label></div>
+     <div class="col-sm-6"><input type="email" name="email" id="" [(ngModel)]="formModel.email"></div>
+   </div>
+   &nbsp;
+   <div class="row">
+    <div class="col-sm-3"><label for="">Salary</label></div>
+     <div class="col-sm-6"><input type="text" name="salary" id="" [(ngModel)]="formModel.salary"></div>
+   </div>
+   &nbsp;
+   <div class="row">
+    <div class="col-sm-3"><label for="">Sales Volume</label></div>
+     <div class="col-sm-6"><input type="text" name="salesVolume" id="" [(ngModel)]="formModel.salesVolume"></div>
+   </div>
+   &nbsp;
+   <div class="row">
+    <div class="col-sm-8"><input type="submit" value="Submit" name="submit" class="btn btn-primary"></div>
+    </div>
+</form>
+</div>
+</div>

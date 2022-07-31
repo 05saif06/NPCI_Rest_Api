@@ -1,0 +1,9 @@
+.salarygreater{
+  background-color: green;
+  color:  white;
+}
+
+.salaryless{
+  background-color: red;
+  color: white;
+}
