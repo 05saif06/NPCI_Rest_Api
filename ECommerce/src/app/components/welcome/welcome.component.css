@@ -1,0 +1,41 @@
+body {
+    height: 100vh;
+    background: linear-gradient(
+      to right,
+      white 0%,
+      rgb(97, 94, 94) 50%,
+      black 0%,
+      black 50%
+    );
+  }
+  
+  h1 {
+    color: rgb(14, 7, 7);
+    white-space: nowrap;
+    font-size: 5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  h1::before {
+    content: attr(data-heading);
+    position: absolute;
+    left: 0;
+    color: rgb(151, 8, 8);
+    width: 50%;
+    overflow: hidden;
+  }
+  div {
+    background-color: #af784c;
+    border: none;
+    color: rgb(180, 13, 13);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }

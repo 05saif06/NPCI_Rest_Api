@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <h2 style="margin-left: 500px;">PRODUCT INFORMATION</h2>
+    <table  border="3" class="table table-hover">
+        <thead>
+        <tr>
+            <th>PRODUCT ID</th>
+            <th>SKU</th>
+            <th>PRODUCT Name</th>
+            <th>DESCRIPTION</th>
+            <th>UNITPRICE</th>
+            <th>IMAGEURL</th>
+            <th>UNITSINSTOCK</th>
+            <th>DATECREATED</th>
+            <th>LASTUPDATED</th>
+            <th>CATEGORYID</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let temp of products">
+            <td>{{temp.prodId}}</td>
+            <td>{{temp.sku}}</td>
+            <td>{{temp.name}}</td>
+            <td>{{temp.description}}</td>
+            <td>{{temp.unitPrice}}</td>     
+            <td>{{temp.imageURL }}</td>
+            <td>{{temp.unitsInStock}}</td>
+            <td>{{temp.dateCreated}}</td>
+            <td>{{temp.lastUpdated}}</td>
+            <td>{{temp.categoryId}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+
+
+
+      
