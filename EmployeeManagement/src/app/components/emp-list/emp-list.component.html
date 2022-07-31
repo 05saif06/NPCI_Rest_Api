@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <h2 style="margin-left: 500px;">EMPLOYEE INFORMATION</h2>
+    <table  border="3" class="table table-hover">
+        <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>Employee Name</th>
+            <th>Job</th>
+            <th>HireDate</th>
+            <th>ManagerID</th>
+            <th>Salary</th>
+            <th>Comission</th>
+            <th>Department No</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let temp of employees">
+            <td>{{temp.empNo}}</td>
+            <td>{{temp.eName}}</td>
+            <td>{{temp.job}}</td>
+            <td>{{temp.hireDate}}</td>
+            <td>{{temp.managerId}}</td>     
+            <td>{{temp.salary}}</td>
+            <td>{{temp.commission}}</td>
+            <td>{{temp.deptNo}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
