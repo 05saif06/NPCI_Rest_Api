@@ -1,0 +1,28 @@
+table {
+    color: black;
+    background-color: lightblue;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+}
+
+.card-image-top {
+    display: block;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 200px;
+    width: 150px;
+    border-style: groove;
+    padding-top: 5px;
+}
+
+.card-body {
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+hr{
+    border: 2px solid grey;
+    border-radius: 5px;
+}

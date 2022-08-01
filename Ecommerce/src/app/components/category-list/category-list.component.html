@@ -1,0 +1,22 @@
+<div class="container" routerLink="/categories">
+    <h2 style="margin-top: 2%;"><strong>Category List</strong></h2>
+    <div class="col">
+        <button class="au-btn-submit" (click)="addCategory()">Add New Category</button>
+    </div>
+    <div style="margin-top: 1%;">
+        <table class="table tabel-dark table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col" style="text-align: center;">Category ID</th>
+                    <th scope="col" style="text-align: center;">Category Name</th>
+                </tr>
+            </thead>
+            <tbody style="text-align: center;">
+                <tr *ngFor="let temp of categories">
+                    <td>{{temp.categoryId}}</td>
+                    <td>{{temp.categoryName}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

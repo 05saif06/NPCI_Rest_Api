@@ -1,0 +1,56 @@
+<div class="container" routerLink="/products">
+  <h2 style="margin-top: 2%;"><strong>Product List</strong></h2>
+  <div class="col">
+    <button type="button" class="btn btn-info" (click)="addProd()">Add New Product</button>
+  </div>
+  <div style="margin-top: 1%;">
+    <!-- <table class="table tabel-dark table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col" style="text-align: center;">Product ID</th>
+                    <th scope="col" style="text-align: center;">Product Name</th>
+                    <th scope="col" style="text-align: center;">Product Model Id</th>
+                    <th scope="col" style="text-align: center;">Product Description</th>
+                    <th scope="col" style="text-align: center;">Unit Price</th>
+                    <th scope="col" style="text-align: center;">Image URL</th>
+                    <th scope="col" style="text-align: center;">Units In Stock</th>
+                    <th scope="col" style="text-align: center;">Date Created</th>
+                    <th scope="col" style="text-align: center;">Last Updated</th>
+                    <th scope="col" style="text-align: center;">Category ID</th>
+                </tr>
+            </thead>
+            <tbody style="text-align: center;">
+                <tr *ngFor="let tempProd of products">
+                    <td>{{tempProd.prodId}}</td>
+                    <td>{{tempProd.name}}</td>
+                    <td>{{tempProd.sku}}</td>
+                    <td>{{tempProd.description}}</td>
+                    <td>{{tempProd.unitPrice | currency:'INR':true}}</td>
+                    <td><img src="{{tempProd.imageURL}}" style="width: 100px; height: 100px;"></td>
+                    <td>{{tempProd.unitsInStock}}</td>
+                    <td>{{tempProd.dateCreated}}</td>
+                    <td>{{tempProd.lastUpdated}}</td>
+                    <td>{{tempProd.categoryId}}</td>
+                </tr>
+            </tbody>
+        </table> -->
+    <div class="grid-container">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col" *ngFor="let tempProd of products">
+          <div class="card col-sm-4" style="border-style: double; background-color: azure;">
+            <div class="col mx-auto">
+              <img src="{{tempProd.imageURL}}" class="card-image-top"/>
+            </div>
+            <hr>
+            <div class="card-body">
+              <h5 class="card-title">{{tempProd.name}}</h5>
+              <h5 class="card-price">{{tempProd.unitPrice | currency:'INR':true}}</h5>
+              <a href="#" class="btn btn-primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
