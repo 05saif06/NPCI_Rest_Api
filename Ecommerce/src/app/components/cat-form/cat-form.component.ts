@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Category } from 'src/app/common/category';
+import { ProductManagementServiceService } from 'src/app/services/product-management-service.service';
 
 @Component({
   selector: 'app-cat-form',
@@ -10,12 +12,15 @@ export class CatFormComponent implements OnInit {
 
   category: Category = new Category(0,"");
 
-  constructor() { }
+  constructor(private prodService: ProductManagementServiceService, private route: Router) { }
 
   ngOnInit(): void {
   }
 
   onSubmit(){
-    console.log(this.category);
+    this.prodService.saveCategory(this.category).subscribe(data =>{
+      this.route.navigateByUrl("/categories")
+    });
+    
   }
 }
