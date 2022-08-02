@@ -37,6 +37,17 @@ export class ProductManagementServiceService {
     };
     return this.httpClient.post<Product>(this.productUrl,product,httpOptions)
   }
+  saveCategory(category: Category){
+    console.log(category)
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': 'auth-token',
+        'Access-Control-Allow-origin': '*'
+      })
+    };
+    return this.httpClient.post<Category>(this.categoryUrl,category,httpOptions)
+  }
 }
 
 interface getProductResponse{
